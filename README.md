@@ -1,5 +1,5 @@
 # BERT Long Document Classification
-an easy-to-use interface to fully trained BERT based models for multi-class and multi-label document classification.
+an easy-to-use interface to fully trained BERT based models for multi-class and multi-label long document classification.
 
 pre-trained models are currently available for two clinical note (EHR) phenotyping tasks: smoker identification and obesity detection.
 
@@ -43,13 +43,13 @@ More [examples](/examples).
 
 # Notes
 - You will need a GPU to apply these models if you would like any hint of speed in your predictions.
-- Alternatively, for bulk document prediction where speed is not of concern lots of available memory and CPU cores would do the trick.
+- For bulk prediction where speed is not of concern lots of available memory and CPU cores would do the trick.
 - Model downloads are cached in `~/.cache/torch/bert_document_classification/`. Try clearing this folder if you have issues.
 
 
 
 # Acknowledgement
-If you found this useful, consider citing our accepted extended abstract accepted at NeurIPS ML4Health 2019.
+If you found this project useful to your work, consider citing our accepted extended abstract accepted at NeurIPS ML4Health 2019.
 
 ```
 Format bibtex citation
