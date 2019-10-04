@@ -1,4 +1,4 @@
-# BERT Long Document Classification
+# :book: BERT Long Document Classification :book:
 an easy-to-use interface to fully trained BERT based models for multi-class and multi-label long document classification.
 
 pre-trained models are currently available for two clinical note (EHR) phenotyping tasks: smoker identification and obesity detection.
