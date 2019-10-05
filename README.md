@@ -1,3 +1,4 @@
+Not final yet - please do not raise issues. Repository is public to host models in version releases.
 # :book: BERT Long Document Classification :book:
 an easy-to-use interface to fully trained BERT based models for multi-class and multi-label long document classification.
 
@@ -49,7 +50,7 @@ More [examples](/examples).
 
 
 # Acknowledgement
-If you found this project useful to your work, consider citing our accepted extended abstract accepted at NeurIPS ML4Health 2019.
+If you found this project useful, consider citing our extended abstract accepted at NeurIPS 2019 ML4Health .
 
 ```
 Format bibtex citation
