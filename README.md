@@ -1,4 +1,3 @@
-Not final yet - please do not raise issues. Repository is public to host models in version releases.
 # :book: BERT Long Document Classification :book:
 an easy-to-use interface to fully trained BERT based models for multi-class and multi-label long document classification.
 
@@ -32,9 +31,9 @@ Maps text documents of arbitrary length to binary vectors indicating labels.
 from bert_document_classification.models import SmokerPhenotypingBert
 from bert_document_classification.models import ObesityPhenotypingBert
 
-smoking_classifier = SmokerPhenotypingBert(device='cpu', batch_size=10) #defaults to GPU prediction
+smoking_classifier = SmokerPhenotypingBert(device='cuda', batch_size=10) #defaults to GPU prediction
 
-obesity_classifier = ObesityPhenotypingBert(device='cuda', batch_size=10) #or CPU if you would like.
+obesity_classifier = ObesityPhenotypingBert(device='cpu', batch_size=10) #or CPU if you would like.
 
 smoking_classifier.predict(["I'm a document! Make me long and the model can still perform well!"])
 ```
@@ -43,8 +42,8 @@ More [examples](/examples).
 
 
 # Notes
-- You will need a GPU to apply these models if you would like any hint of speed in your predictions.
-- For bulk prediction where speed is not of concern lots of available memory and CPU cores would do the trick.
+- For training you will need a GPU.
+- For bulk inference where speed is not of concern lots of available memory and CPU cores will likely work.
 - Model downloads are cached in `~/.cache/torch/bert_document_classification/`. Try clearing this folder if you have issues.
 
 

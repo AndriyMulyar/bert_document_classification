@@ -1,11 +1,11 @@
 from bert_document_classification.models import ObesityPhenotypingBert
+# from bert_document_classification.models import SmokerPhenotypingBert
 
-obesity_classifier = ObesityPhenotypingBert(device='cuda', batch_size=10) #defaults to GPU prediction
+obesity_classifier = ObesityPhenotypingBert(device='cpu', batch_size=10) #defaults to GPU (device='cuda') prediction
 
 documents = [
     "I'm a document! Even if i'm long this model will perform well!",
     "Another one! The patient has hypertension."
-
 ]
 
 predictions = obesity_classifier.predict(documents).transpose(0,1)

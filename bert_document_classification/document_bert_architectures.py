@@ -22,13 +22,13 @@ class DocumentBertLSTM(BertPreTrainedModel):
         )
 
     #input_ids, token_type_ids, attention_masks
-    def forward(self, document_batch: torch.Tensor, document_sequence_lengths: list, freeze_bert=False):
+    def forward(self, document_batch: torch.Tensor, document_sequence_lengths: list, freeze_bert=False, device='cuda'):
 
         #contains all BERT sequences
         #bert should output a (batch_size, num_sequences, bert_hidden_size)
         bert_output = torch.zeros(size=(document_batch.shape[0],
                                               min(document_batch.shape[1],self.bert_batch_size),
-                                              self.bert.config.hidden_size), dtype=torch.float, device='cuda')
+                                              self.bert.config.hidden_size), dtype=torch.float, device=device)
 
         #only pass through bert_batch_size numbers of inputs into bert.
         #this means that we are possibly cutting off the last part of documents.

@@ -183,7 +183,7 @@ class BertForDocumentClassification():
                 #self.log.info(batch_document_tensors.shape)
                 batch_predictions = self.bert_doc_classification(batch_document_tensors,
                                                                  batch_document_sequence_lengths,
-                                                                 freeze_bert=self.args['freeze_bert'])
+                                                                 freeze_bert=self.args['freeze_bert'], device=self.args['device'])
 
                 batch_correct_output = correct_output[i:i + self.args['batch_size']].to(device=self.args['device'])
                 loss = self.loss_function(batch_predictions, batch_correct_output)
@@ -233,7 +233,7 @@ class BertForDocumentClassification():
                 batch_document_sequence_lengths= document_sequence_lengths[i:i+self.args['batch_size']]
 
                 prediction = self.bert_doc_classification(batch_document_tensors,
-                                                          batch_document_sequence_lengths)
+                                                          batch_document_sequence_lengths,device=self.args['device'])
                 predictions[i:i + self.args['batch_size']] = prediction
 
         for r in range(0, predictions.shape[0]):
