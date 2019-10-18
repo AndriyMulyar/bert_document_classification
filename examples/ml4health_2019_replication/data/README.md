@@ -6,7 +6,9 @@ You must sign the appropriate agreements [here](https://portal.dbmi.hms.harvard.
 From "2006 De-identification and Smoking Status Challenge Downloads" section on DBMI portal:
 
 In this directory (`examples/ml4health_2019_replication/data`), un-zip the files:
-`smokers_surrogate_test_all_version2.zip` and `smokers_surrogate_train_all_version2.zip`.
+`smokers_surrogate_test_all_version2.zip`
+
+`smokers_surrogate_train_all_version2.zip`.
 
 #### N2C2 2008
 From "2008 Obesity Challenge Downloads" section on DBMI portal you want the files:
