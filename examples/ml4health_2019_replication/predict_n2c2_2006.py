@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     test = list(load_n2c2_2006(partition='test'))
 
-    smoking_bert_phenotyper = SmokerPhenotypingBert(device='cpu')
+    smoking_bert_phenotyper = SmokerPhenotypingBert(device='cpu') #CPU prediction (change to 'cuda' if possible)
     labels = smoking_bert_phenotyper.labels
 
     test_documents, test_labels = [],[]

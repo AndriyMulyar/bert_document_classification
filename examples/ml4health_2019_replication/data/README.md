@@ -62,4 +62,7 @@ examples/ml4health_2019_replication/data/
 ```
 
 The .gitignore will automatically ignore pushing up any XML files in this directly for PHI protection.
-Now all scripts in `/examples/ml4health_2019_replication` will work.
+Now all scripts in `/examples/ml4health_2019_replication` will work
+
+#### Make sure you have downloaded ClinicalBERT and referenced it's path in each respective config file!
+Clinical Bert: https://github.com/EmilyAlsentzer/clinicalBERT
