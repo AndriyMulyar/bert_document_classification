@@ -10,8 +10,14 @@ In this directory (`examples/ml4health_2019_replication/data`), un-zip the files
 
 `smokers_surrogate_train_all_version2.zip`.
 
+This should yield two XML files:
+
+`smokers_surrogate_test_all_version2.xml`
+
+`smokers_surrogate_train_all_version2.xml`.
+
 #### N2C2 2008
-From "2008 Obesity Challenge Downloads" section on DBMI portal you want the files:
+From "2008 Obesity Challenge Downloads" section on DBMI portal you want the XML files:
 
 1. Training
 
