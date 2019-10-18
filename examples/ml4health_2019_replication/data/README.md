@@ -43,7 +43,7 @@ From "2008 Obesity Challenge Downloads" section on DBMI portal you want the XML 
 These are located in the zip files in the section. Pull them down and un-zip everything into this directory (again `examples/ml4health_2019_replication/data`)
 
 
-As a pre-flight check, your directory should look like this.
+As a pre-flight check, your data directory should look like this.
 
 ```bash
 examples/ml4health_2019_replication/data/
@@ -60,3 +60,5 @@ examples/ml4health_2019_replication/data/
 └── smokers_surrogate_train_all_version2.xml
 
 ```
+
+The .gitignore will automatically ignore pushing up any XML files in this directly for PHI protection.
