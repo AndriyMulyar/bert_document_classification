@@ -14,7 +14,9 @@ if __name__ == "__main__":
 
     test = list(load_n2c2_2006(partition='test'))
 
-    smoking_bert_phenotyper = SmokerPhenotypingBert(device='cpu') #CPU prediction (change to 'cuda' if possible)
+    print(len(test))
+
+    smoking_bert_phenotyper = SmokerPhenotypingBert(model_name="/export/c08/aymulyar/results/document_bert/n2c2_2006/run_2019_09_07_22_03_30_b19/checkpoint_1000", device='cuda') #CPU prediction (change to 'cuda' if possible)
     labels = smoking_bert_phenotyper.labels
 
     test_documents, test_labels = [],[]
@@ -27,7 +29,7 @@ if __name__ == "__main__":
         test_labels.append(label)
 
     correct_labels = torch.FloatTensor(test_labels).transpose(0,1)
-    print("Predicting")
+
     predictions = smoking_bert_phenotyper.predict(test_documents)
     assert correct_labels.shape == predictions.shape
 

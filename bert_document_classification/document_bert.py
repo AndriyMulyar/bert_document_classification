@@ -147,10 +147,7 @@ class BertForDocumentClassification():
         """
 
         train_documents, train_labels = train
-        dev_documents, dev_labels = train
-
-
-
+        dev_documents, dev_labels = dev
 
         self.bert_doc_classification.train()
 

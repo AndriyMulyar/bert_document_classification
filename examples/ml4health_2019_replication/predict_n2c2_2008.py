@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     test = list(load_n2c2_2008(partition='test'))
 
-    obesity_bert_phenotyper = ObesityPhenotypingBert(device='cpu')
+    obesity_bert_phenotyper = ObesityPhenotypingBert(model_name="/export/c08/aymulyar/results/document_bert/n2c2_2008/run_2019_08_08_23_52_05_b19/checkpoint_1000", device='cuda')
     labels = obesity_bert_phenotyper.labels
 
     test_documents, test_labels = [],[]
@@ -27,7 +27,6 @@ if __name__ == "__main__":
         test_labels.append(label)
 
     correct_labels = torch.FloatTensor(test_labels).transpose(0,1)
-    print("Predicting")
     predictions = obesity_bert_phenotyper.predict(test_documents)
     assert correct_labels.shape == predictions.shape
 
