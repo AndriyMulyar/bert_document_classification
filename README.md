@@ -42,7 +42,7 @@ More [examples](/examples).
 
 # Replication
 Go to the directory [/examples/ml4health_2019_replication](/examples/ml4health_2019_replication). This [README](/examples/ml4health_2019_replication/data/README.md) will
-give instructions on how to appropriately insert data from DBMe. 
+give instructions on how to appropriately insert data from DBMI to replicate the results in the paper. 
 
 # Notes
 - For training you will need a GPU.

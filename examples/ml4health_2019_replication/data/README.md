@@ -1,7 +1,7 @@
 Data cannot be directly included with source code.
 You must sign the appropriate agreements [here](https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/).
 
-After clone this repository, place the datasets here. The data is spread over multiple files for each dataset, find
+After clone this repository, place the datasets here. The data is spread over multiple files for each dataset. Find
 below a step-by-step guide to insure you have the appropriate data.
 #### N2C2 2006
 From "2006 De-identification and Smoking Status Challenge Downloads" section on DBMI portal:
@@ -62,3 +62,4 @@ examples/ml4health_2019_replication/data/
 ```
 
 The .gitignore will automatically ignore pushing up any XML files in this directly for PHI protection.
+Now all scripts in `/examples/ml4health_2019_replication` will work.
