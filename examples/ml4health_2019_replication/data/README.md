@@ -14,14 +14,21 @@ From "2008 Obesity Challenge Downloads" section on DBMI portal you want the file
 1. Training
 
 `obesity_patient_records_training.xml`
+
 `obesity_patient_records_training2.xml`
+
 `obesity_standoff_annotations_training.xml`
+
 `obesity_standoff_annotations_training_addendum.xml`
+
 `obesity_standoff_annotations_training_addendum2.xml`
+
 `obesity_standoff_annotations_training_addendum3.xml`
+
 
 2.
 `obesity_patient_records_test.xml`
+
 `obesity_standoff_annotations_test.xml`
 
 These are located in the zip files in the section. Pull them down and un-zip everything into this directory (again `examples/ml4health_2019_replication/data`)
