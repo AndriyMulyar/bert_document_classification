@@ -55,7 +55,14 @@ give instructions on how to appropriately insert data from DBMI to replicate the
 If you found this project useful, consider citing our extended abstract accepted at NeurIPS 2019 ML4Health .
 
 ```
-Format bibtex citation
+@misc{mulyar2019phenotyping,
+    title={Phenotyping of Clinical Notes with Improved Document Classification Models Using Contextualized Neural Language Models},
+    author={Andriy Mulyar and Elliot Schumacher and Masoud Rouhizadeh and Mark Dredze},
+    year={2019},
+    eprint={1910.13664},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
 ```
 
 Implementation, development and training in this project were supported by funding from the Mark Dredze Lab at Johns Hopkins University.
