@@ -14,7 +14,7 @@ class DocumentBertLSTM(BertPreTrainedModel):
         self.bert = BertModel(bert_model_config)
         self.bert_batch_size= self.bert.config.bert_batch_size
         self.dropout = nn.Dropout(p=bert_model_config.hidden_dropout_prob)
-        self.lstm = LSTM(bert_model_config.hidden_size,bert_model_config.hidden_size)
+        self.lstm = LSTM(bert_model_config.hidden_size,bert_model_config.hidden_size, )
         self.classifier = nn.Sequential(
             nn.Dropout(p=bert_model_config.hidden_dropout_prob),
             nn.Linear(bert_model_config.hidden_size, bert_model_config.num_labels),
@@ -69,7 +69,7 @@ class DocumentBertLinear(BertPreTrainedModel):
         )
 
     #input_ids, token_type_ids, attention_masks
-    def forward(self, document_batch: torch.Tensor, document_sequence_lengths: list, freeze_bert=False):
+    def forward(self, document_batch: torch.Tensor, document_sequence_lengths: list, freeze_bert=False, device='cuda'):
 
         #contains all BERT sequences
         #bert should output a (batch_size, num_sequences, bert_hidden_size)
@@ -114,7 +114,7 @@ class DocumentBertMaxPool(BertPreTrainedModel):
         )
 
     #input_ids, token_type_ids, attention_masks
-    def forward(self, document_batch: torch.Tensor, document_sequence_lengths: list, freeze_bert=False):
+    def forward(self, document_batch: torch.Tensor, document_sequence_lengths: list, freeze_bert=False, device='cuda'):
 
         #contains all BERT sequences
         #bert should output a (batch_size, num_sequences, bert_hidden_size)
