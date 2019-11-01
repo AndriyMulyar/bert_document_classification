@@ -52,7 +52,7 @@ give instructions on how to appropriately insert data from DBMI to replicate the
 
 
 # Acknowledgement
-If you found this project useful, consider citing our extended abstract accepted at NeurIPS 2019 ML4Health .
+If you found this project useful, consider citing our extended abstract.
 
 ```
 @misc{mulyar2019phenotyping,
