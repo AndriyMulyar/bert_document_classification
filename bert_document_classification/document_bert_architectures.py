@@ -41,10 +41,9 @@ class DocumentBertLSTM(BertPreTrainedModel):
         output, (_, _) = self.lstm(bert_output.permute(1,0,2))
 
         last_layer = output[-1]
-        #print("Last LSTM layer shape:",last_layer.shape)
 
         prediction = self.classifier(last_layer)
-        #print("Prediction Shape", prediction.shape)
+
         assert prediction.shape[0] == document_batch.shape[0]
         return prediction
 
@@ -58,7 +57,6 @@ class DocumentBertLSTM(BertPreTrainedModel):
 
     def unfreeze_bert_encoder_last_layers(self):
         for name, param in self.bert.named_parameters():
-            #print(name, param)
             if "encoder.layer.11" in name or "pooler" in name:
                 param.requires_grad = True
     def unfreeze_bert_encoder_pooler_layer(self):
@@ -160,7 +158,6 @@ class DocumentBertMaxPool(BertPreTrainedModel):
 
     def unfreeze_bert_encoder_last_layers(self):
         for name, param in self.bert.named_parameters():
-            #print(name, param)
             if "encoder.layer.11" in name or "pooler" in name:
                 param.requires_grad = True
     def unfreeze_bert_encoder_pooler_layer(self):
@@ -200,7 +197,6 @@ class DocumentBertTransformer(BertPreTrainedModel):
 
     def unfreeze_bert_encoder_last_layers(self):
         for name, param in self.bert.named_parameters():
-            #print(name, param)
             if "encoder.layer.11" in name or "pooler" in name:
                 param.requires_grad = True
     def unfreeze_bert_encoder_pooler_layer(self):
@@ -226,8 +222,6 @@ class DocumentBertTransformer(BertPreTrainedModel):
 
         transformer_output = self.transformer_encoder(bert_output.permute(1,0,2))
 
-        #print(transformer_output.shape)
-
         prediction = self.classifier(transformer_output.permute(1,0,2).max(dim=1)[0])
         assert prediction.shape[0] == document_batch.shape[0]
         return prediction
@@ -242,7 +236,6 @@ class DocumentBertTransformer(BertPreTrainedModel):
 
     def unfreeze_bert_encoder_last_layers(self):
         for name, param in self.bert.named_parameters():
-            #print(name, param)
             if "encoder.layer.11" in name or "pooler" in name:
                 param.requires_grad = True
     def unfreeze_bert_encoder_pooler_layer(self):
