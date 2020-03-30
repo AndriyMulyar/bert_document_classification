@@ -130,6 +130,9 @@ class BertForDocumentClassification():
 
 
         self.bert_doc_classification = document_bert_architectures[self.args['architecture']].from_pretrained(self.args['bert_model_path'], config=config)
+        self.bert_doc_classification.freeze_bert_encoder()
+        self.bert_doc_classification.unfreeze_bert_encoder_last_layers()
+
         self.optimizer = torch.optim.Adam(
             self.bert_doc_classification.parameters(),
             weight_decay=self.args['weight_decay'],
