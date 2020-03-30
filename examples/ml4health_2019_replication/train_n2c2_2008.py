@@ -13,7 +13,6 @@ def _initialize_arguments(p: configargparse.ArgParser):
     p.add('--bert_model_path', help='Model path to BERT')
     p.add('--labels', help='Numbers of labels to predict over', type=str)
     p.add('--architecture', help='Training architecture', type=str)
-    p.add('--freeze_bert', help='Whether to freeze bert', type=bool)
 
     p.add('--batch_size', help='Batch size for training multi-label document classifier', type=int)
     p.add('--bert_batch_size', help='Batch size for feeding 510 token subsets of documents through BERT', type=int)
