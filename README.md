@@ -4,12 +4,9 @@ an easy-to-use interface to fully trained BERT based models for multi-class and 
 pre-trained models are currently available for two clinical note (EHR) phenotyping tasks: smoker identification and obesity detection.
 
 To sustain future development and improvements, we interface [pytorch-transformers](https://github.com/huggingface/pytorch-transformers)
-for all language model components of our architectures. Additionally, their is a [blog post](http://andriymulyar.com/blog/bert-document-classification) describing the architecture.
+for all language model components of our architectures. Additionally, their is a [blog post](http://andriymulyar.com/blog/bert-document-classification) describing the idea behind the architecture.
 
-| Model             |          Dataset |  # Labels |  Evaluation F1 |
-|-------------------|------------------|--------|----------|
-|   n2c2_2006_smoker_lstm   | I2B2 2006: Smoker Identification            | 4 |      0.981        |
-| n2c2_2008_obesity_lstm | I2B2 2008: Obesity and Co-morbidities Identification    | 15 |      0.997        |
+*This repository contains an updated implementation that corrects are error found in the original version of the preprint*
 
 # Installation
 
