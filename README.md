@@ -6,7 +6,7 @@ pre-trained models are currently available for two clinical note (EHR) phenotypi
 To sustain future development and improvements, we interface [pytorch-transformers](https://github.com/huggingface/pytorch-transformers)
 for all language model components of our architectures. Additionally, their is a [blog post](http://andriymulyar.com/blog/bert-document-classification) describing the idea behind the architecture.
 
-*This repository contains an updated implementation that corrects are error found in the original version of the preprint*
+*This repository contains an updated implementation that corrects an error found in the original version of the preprint*
 
 # Installation
 
